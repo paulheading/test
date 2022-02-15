@@ -1,0 +1,10 @@
+@import "styles/globals/mixins.scss";
+
+.container {
+  justify-content: space-between;
+  color: $trello-text--faded;
+  align-items: center;
+  padding: 0.625rem;
+  font-weight: 600;
+  display: flex;
+}

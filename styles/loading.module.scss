@@ -1,0 +1,9 @@
+@import "styles/globals/mixins.scss";
+
+.loading div {
+  @include loading;
+  
+  &:not(:last-of-type) {
+    margin-bottom: 0.5rem;
+  }
+}

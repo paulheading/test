@@ -1,0 +1,63 @@
+$font-family-base: neue-haas-grotesk-text, sans-serif;
+$font-family-headings: neue-haas-grotesk-display, sans-serif;
+
+$spotify-bg: #0d100a;
+$spotify-header: #222b1b;
+$spotify-text: #a0a19e;
+
+$trello-bg: #ebecf0;
+$trello-text: #172b4e;
+$trello-text--faded: #5f6c84;
+
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$gray-loading: $gray-400;
+$blue: #007bff;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #28a745;
+$teal: #20c997;
+$teal--dark: darken($teal, 10%);
+$teal--xdark: darken($teal, 20%);
+$teal--xxdark: darken($teal, 35%);
+$cyan: #17a2b8;
+$sky: #87cefa;
+
+$hero-a-1: hsl(230, 100%, 60%);
+$hero-a-2: hsl(150, 100%, 60%);
+$hero-a-3: hsl(170, 100%, 70%);
+
+$hero-b-1: hsl(45, 100%, 50%);
+$hero-b-2: hsl(1, 100%, 65%);
+$hero-b-3: hsl(50, 100%, 70%);
+
+$hero-a: $hero-a-1, $hero-a-2, $hero-a-3;
+$hero-b: $hero-b-1, $hero-b-2, $hero-b-3;
+
+$h1-font-size: 2.500rem;
+$h3-font-size: 2.000rem;
+$h4-font-size: 1.500rem;
+$h5-font-size: 1.125rem;
+$h6-font-size: 1.000rem;
+
+$status-neutral: hsl(205, 100%, 37%);
+$status-error: hsl(0, 45%, 37%);
+$status-success: hsl(120, 30%, 37%);
+
+$focus: hsl(45, 100%, 90%);
+$focus--dark: hsl(45, 100%, 65%);
+
+$topbar: $gray-500;
+
+$border-radius-lg: 0.5rem;

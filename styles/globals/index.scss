@@ -1,0 +1,73 @@
+@import "./mixins.scss";
+@import "./atomic.scss";
+
+body {
+  font-family: $font-family-base;
+  background-color: $gray-200;
+  font-size: 1.25rem;
+  font-weight: 800;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: $font-family-headings;
+  font-size: $h1-font-size;
+  margin: 0;
+}
+
+h2 {
+  font-family: $font-family-headings;
+  margin: 0;
+}
+
+h3 {
+  font-family: $font-family-headings;
+  font-size: $h3-font-size;
+  margin: 0;
+}
+
+h4 {
+  font-family: $font-family-headings;
+  font-size: $h4-font-size;
+  margin: 0;
+}
+
+h5 {
+  font-family: $font-family-headings;
+  font-size: $h5-font-size;
+  margin: 0;
+}
+
+h6 {
+  font-size: $h6-font-size;
+  margin: 0;
+}
+
+p {
+  margin: 0;
+
+  + p {
+    margin-top: 1rem;
+  }
+
+  a {
+    @include focus {
+      @include single-box($focus--dark);
+      background-color: $focus--dark;
+    }
+  }
+}
+
+input, textarea {
+  -webkit-appearance: none;
+  border-radius: 0;
+}

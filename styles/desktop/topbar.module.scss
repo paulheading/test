@@ -1,0 +1,23 @@
+@import "styles/globals/mixins.scss";
+
+.container {
+  border-bottom: 0.25rem $teal--xdark solid;
+  background-color: $teal--dark;
+  color: $teal--xxdark;
+  padding: 0.5rem;
+}
+
+.wrap {
+  display: inline-flex;
+  align-items: center;
+}
+
+.icon {
+  width: 5rem;
+
+  > svg {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+  }
+}

@@ -1,0 +1,24 @@
+@import "styles/globals/mixins.scss";
+
+.window_outer {
+  @include window_outer;
+
+  .skiplink {
+    @include skiplink;
+  }
+
+  .wrap {
+    position: relative;
+    z-index: 1;
+  }
+
+  .window_inner {
+    @include window_inner;
+    background-color: $trello-bg;
+    font-size: $h5-font-size;
+    padding-right: 0.625rem;
+    padding-left: 0.625rem;
+    color: $trello-text;
+    font-weight: 600;
+  }
+}

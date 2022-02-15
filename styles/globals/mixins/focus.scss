@@ -1,0 +1,28 @@
+
+@mixin focus {
+  &:focus {
+    outline: none;
+  }
+
+  &:hover,
+  &[data-focus-visible-added] {
+    @content;
+  }
+}
+
+@mixin double-box(
+  $bg: white,
+  $col: black,
+  $bg_size: 0.25rem,
+  $col_size: 0.15rem
+) {
+  box-shadow: 0 0 0 $bg_size $bg, 0 0 0 ($bg_size + $col_size) $col;
+  position: relative;
+  z-index: 2;
+}
+
+@mixin single-box($bg: white, $size: 0.25rem) {
+  box-shadow: 0 0 0 $size $bg;
+  position: relative;
+  z-index: 2;
+}

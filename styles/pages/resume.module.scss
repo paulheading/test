@@ -1,0 +1,112 @@
+@import "styles/globals/mixins.scss";
+
+.container {
+  padding: 10rem 1rem;
+  text-align: left;
+}
+
+.wrap {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 50rem;
+
+  @include medium-up {
+    box-shadow: 0 0 0.5rem $gray-300;
+  }
+}
+
+.row {
+  background-color: white;
+  padding: 1.5rem;
+
+  @include medium-down {
+    box-shadow: 0 0 0.5rem $gray-300;
+  }
+
+  + .row {
+    @include medium-up {
+      border-top: 1px dashed $gray-300;
+    }
+    @include medium-down {
+      margin-top: 1rem;
+    }
+  }
+}
+
+.double_row {
+  composes: row;
+  display: grid;
+  gap: 1rem;
+
+  @include medium-up {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+.triple_row {
+  composes: row;
+  display: grid;
+
+  @include medium-up {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 1rem;
+    
+    .title_row {
+      grid-column: 1 / 4;
+    }
+  }
+
+  @include medium-down {
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-left: 0;
+
+    .title_row {
+      margin-bottom: 1.5rem;
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+    }
+
+    .column {
+      padding-bottom: 1.5rem;
+      padding-right: 1.5rem;
+      padding-left: 1.5rem;
+
+      + .column {
+        border-top: 1px dashed $gray-300;
+        padding-top: 1.5rem;
+      }
+    }    
+  }
+}
+
+.title_row {
+  margin-bottom: 1rem;
+}
+
+.tag_row {
+  composes: row;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  li + li {
+    margin-top: 0.25rem;
+  }
+}
+
+.name {
+  @include medium-down {
+    font-size: $h3-font-size;
+  }
+}
+
+.link {
+  @include focus {
+    @include single-box($focus--dark);
+    background-color: $focus--dark;
+  }
+}

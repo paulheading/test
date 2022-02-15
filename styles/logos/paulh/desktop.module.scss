@@ -1,0 +1,13 @@
+@import "styles/globals/mixins.scss";
+
+@include medium-down {
+  .container {
+    display: none;
+  }
+}
+
+@include medium-up {
+  .container {
+    display: block;
+  }
+}

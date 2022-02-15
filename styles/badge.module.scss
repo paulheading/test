@@ -1,0 +1,33 @@
+@import "styles/globals/mixins.scss";
+
+.badge {
+  background-color: $gray-700;
+  font-size: $h6-font-size;
+  padding: 0.25rem 0.5rem;
+  display: inline-block;
+  color: white;
+}
+
+.badge.loading {
+  @include loading;
+  background-color: $gray-loading;
+  color: transparent;
+}
+
+.badge:not(.loading) {
+  border-radius: 0.25rem;
+
+  &.green {
+    background-color: $green;
+  }
+  
+  &.purple {
+    background-color: $purple;
+  }
+  
+  &.blue {
+    background-color: $blue;
+  }
+}
+
+

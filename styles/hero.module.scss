@@ -1,0 +1,54 @@
+@import "styles/globals/mixins.scss";
+
+.container {
+  place-items: center;
+  overflow: hidden;
+  display: grid;
+  height: 30rem;
+}
+
+.container[id="000000"] {
+  @include hero-colors;
+}
+
+.container[id="606d70215309533eec28564a"] {
+  @include hero-colors($hero-a...);
+}
+
+.container[id="6073409c74b96c31fb853842"] {
+  @include hero-colors($hero-b...);
+}
+
+
+.content {
+  grid-column: 1 / 2;
+  position: relative;
+  grid-row: 1 / 2;
+}
+
+.wrap {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: center;
+  max-width: 30rem;
+  display: grid;
+  height: 30rem;
+}
+
+.title {
+  composes: content;
+  padding-right: 2rem;
+  padding-left: 2rem;
+  z-index: 2;
+}
+
+.svg {
+  composes: content;
+  transform: scale(2);
+}
+
+.svg[id="6073409c74b96c31fb853842"] {
+  path {
+    fill: rgba($hero-b-1, 25%);
+  }
+}

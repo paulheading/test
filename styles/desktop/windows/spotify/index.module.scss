@@ -1,0 +1,26 @@
+@import "styles/globals/mixins.scss";
+
+.window_outer {
+  @include window_outer;
+}
+
+.window_outer.closed {
+  transform: scale(0.5);
+  display: none;
+  opacity: 0;
+}
+
+.window_inner {
+  @include window_inner;
+  background-color: black;
+  color: white;
+}
+
+.skiplink {
+  @include skiplink;
+}
+
+.wrap {
+  position: relative;
+  z-index: 1;
+}

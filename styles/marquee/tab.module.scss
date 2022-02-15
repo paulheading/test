@@ -1,0 +1,24 @@
+@import "styles/globals/mixins.scss";
+
+.container {
+  position: absolute;
+  top: -3.25rem;
+  width: 100%;
+}
+
+.link {
+  border: 0.25rem solid transparent;
+  border-top-right-radius: 0.25rem;
+  border-top-left-radius: 0.25rem;
+  text-decoration: underline;
+  background-color: black;
+  display: inline-block;
+  padding: 0.75rem;
+  color: white;
+
+  @include focus {
+    background-color: white;
+    border-color: black;
+    color: black;
+  }
+}

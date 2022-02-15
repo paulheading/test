@@ -1,0 +1,15 @@
+@import "styles/globals/mixins.scss";
+
+.container {
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0.625rem;
+  display: flex;
+}
+
+.skiplink {
+  @include skiplink;
+  left: -1.625rem;
+  top: -1rem;
+}

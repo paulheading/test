@@ -1,0 +1,20 @@
+@import "styles/globals/mixins.scss";
+
+.container {
+  background-color: black;
+  justify-content: center;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.link {
+  text-decoration: underline;
+
+  @include focus {
+    @include single-box(white);
+    background-color: white;
+    color: black;
+  }
+}

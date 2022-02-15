@@ -1,0 +1,35 @@
+@import "styles/globals/mixins.scss";
+
+.container {
+  border-bottom-right-radius: $border-radius-lg;
+  border-bottom-left-radius: $border-radius-lg;
+  border: 1px solid $spotify-header;
+  padding-bottom: 0.5rem;
+  color: $spotify-text;
+  padding-top: 0.5rem;
+  max-height: 16.5rem;
+  overflow: scroll;
+}
+
+.row {
+  grid-template-columns: 2rem auto;
+  padding: 0.25rem 0.75rem;
+  display: grid;
+}
+
+.link {
+  @include focus {
+    @include single-box($focus);
+    background-color: $focus;
+    color: black;
+  }
+}
+
+.title {
+  composes: link;
+  color: white;
+}
+
+.artist {
+  composes: link;
+}

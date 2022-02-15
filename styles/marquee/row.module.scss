@@ -1,0 +1,27 @@
+@import "styles/globals/mixins.scss";
+
+.container {
+  border-bottom: 0.25rem solid black;
+  border-top: 0.25rem solid black;
+  background-color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.link {
+  padding-bottom: 0.75rem;
+  padding-top: 0.75rem;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+
+  @include focus {
+    background-color: $focus;
+  }
+}
+
+.phrase {
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}

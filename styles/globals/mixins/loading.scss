@@ -1,0 +1,29 @@
+@import "../variables.scss";
+
+@mixin loading($color: $gray-loading) {
+  background-color: $color;
+  position: relative;
+  overflow: hidden;
+  color: $color;
+  
+  $background: lighten($color, 40%);
+
+  &::before {
+    background: linear-gradient(to right, rgba($background, 0) 45%, rgba($background, 0.35) 50%, rgba($background, 0) 55%) 50% 50%;
+    animation: placeholder 0.8s linear infinite;
+    position: absolute;
+    margin-left: -250%;
+    content: "";
+    width: 500%;
+    z-index: 1;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    top: 0;
+  }
+
+  @keyframes placeholder {
+    0% { transform: translate3d(-30%, 0, 0); }
+    100% { transform: translate3d(30%, 0, 0); }
+  }
+}

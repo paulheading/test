@@ -1,0 +1,15 @@
+@import "styles/globals/mixins.scss";
+
+.skills {
+  margin: -0.25rem;
+}
+
+.badge {
+  margin: 0.25rem;
+}
+
+.loading {
+  @include loading;
+  background-color: $gray-loading;
+  color: transparent;
+}

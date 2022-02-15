@@ -1,0 +1,19 @@
+@import "styles/globals/mixins.scss";
+
+.title {
+  background-color: $teal--dark;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  display: inline-block;
+  color: white;
+}
+
+.button {
+  @include invisible-button;
+  @include focus {
+    .title {
+      background-color: white;
+      color: $teal--dark;
+    }
+  }
+}

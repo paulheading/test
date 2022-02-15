@@ -1,0 +1,44 @@
+@import "styles/globals/mixins.scss";
+
+.window_outer {
+  @include window_outer;
+  font-family: $font-family-headings;
+  font-size: $h6-font-size;
+  font-weight: 400;
+}
+
+.window_inner {
+  @include window_inner;
+  background-color: black;
+  position: relative;
+  border: 1px solid;
+  color: white;
+  padding: 1rem;
+  z-index: 1;
+}
+
+.name {
+  text-transform: capitalize;
+  display: inline-block;
+
+  @include focus {
+    @include single-box(white);
+    background-color: white;
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.copy {
+  justify-content: space-between;
+  margin-bottom: -0.75rem;
+  display: flex;
+}
+
+.downloads {
+  font-size: $h4-font-size;
+}
+
+.graph svg {
+  display: block;
+}

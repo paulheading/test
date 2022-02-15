@@ -1,0 +1,47 @@
+@import "./variables.scss";
+@import "./mixins/media-queries.scss";
+@import "./mixins/focus.scss";
+@import "./mixins/loading.scss";
+@import "./mixins/desktop.scss";
+
+@mixin input-colors {
+  &,
+  &::placeholder {
+    color: inherit;
+  }
+
+  @include focus {
+    background-color: $focus;
+
+    &,
+    &::placeholder {
+      color: black;
+    }
+  }
+}
+
+@mixin invisible-button {
+  background-color: transparent;
+  font-size: inherit;
+  font-weight: 800;
+  cursor: pointer;
+  color: inherit;
+  padding: 1rem;
+  border: none;
+}
+
+@mixin hero-colors($a: #4261ff, $b: #ff4262, $c: #ff66b3) {
+  background: linear-gradient(0deg, $a 0%, $b 100%);
+
+  path {
+    stroke: $c;
+  }
+
+  a {
+    @include focus {
+      $tint: rgba($c, 0.5);
+      @include single-box($tint);
+      background-color: $tint;
+    }
+  }
+}

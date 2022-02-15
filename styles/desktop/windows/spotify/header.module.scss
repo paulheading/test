@@ -1,0 +1,37 @@
+@import "styles/globals/mixins.scss";
+
+.container {
+  background-color: $spotify-header;
+  grid-template-columns: 5rem auto;
+  position: relative;
+  min-height: 5rem;
+  overflow: hidden;
+  display: grid;
+}
+
+.wrap {
+  grid-template-columns: auto 1.5rem;
+  padding: 0.625rem;
+  display: grid;
+}
+
+.link {
+  background-color: $gray-300;
+  display: flex;
+}
+
+.name {
+  @include focus {
+    @include single-box($focus);
+    background-color: $focus;
+    color: black;
+  }
+}
+
+.owner {
+  @include focus {
+    @include single-box($focus);
+    background-color: $focus;
+    color: black;
+  }
+}

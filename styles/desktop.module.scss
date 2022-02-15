@@ -1,0 +1,114 @@
+@import "styles/globals/mixins.scss";
+
+.container {
+  overflow: hidden;
+}
+
+.canvas {
+  background-color: $teal;
+  padding: 1rem;
+}
+
+.wrap {
+  justify-content: space-between;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 60rem;
+  display: flex;
+  height: 30rem;
+
+  @include large-down {
+    max-width: 30rem;
+  }
+}
+
+.windows {
+  position: relative;
+}
+
+.window {
+  background-color: black;
+  border-radius: $border-radius-lg;
+  position: absolute;
+  color: white;
+  padding: 1rem;
+}
+
+.folders {
+  grid-template-columns: repeat(2, auto);
+  align-content: flex-start;
+  direction: rtl;
+  display: grid;
+  gap: 0.5rem;
+
+  @include large-down {
+    display: none;
+  }
+}
+
+.npm {
+  left: 0rem;
+  z-index: 2;
+  top: 6rem;
+
+  @include small-up {
+    left: 11rem;
+  }
+
+  @include large-up {
+    left: 8rem;
+  }
+}
+
+.gem {
+  top: 14.5rem;
+  left: -1rem;
+  z-index: 5;
+
+  @include small-up {
+    left: 10rem;
+  }
+
+  @include large-up {
+    left: 7rem;
+  }
+}
+
+.trello {
+  left: -4rem;
+  z-index: 6;
+  top: 9rem;
+
+  @include small-up {
+    left: 3rem;
+  }
+
+  @include large-up {
+    left: 0rem;
+  }
+}
+
+.spotify_2020 {
+  left: 14rem;
+  z-index: 1;
+  top: 4rem;
+
+  @include small-down {
+    left: -1rem;
+    top: 5rem;
+  }
+}
+
+.spotify_2021 {
+  left: -6rem;
+  z-index: 3;
+  top: 3rem;
+
+  @include small-up {
+    left: 7rem;
+  }
+
+  @include large-up {
+    left: 4rem;
+  }
+}
